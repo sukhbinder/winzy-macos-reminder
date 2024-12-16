@@ -5,7 +5,7 @@
 [![Tests](https://github.com/sukhbinder/winzy-macos-reminder/workflows/Test/badge.svg)](https://github.com/sukhbinder/winzy-macos-reminder/actions?query=workflow%3ATest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/sukhbinder/winzy-macos-reminder/blob/main/LICENSE)
 
-Create reminers in macos in cli
+Create reminders in macos with cli
 
 ## Installation
 
