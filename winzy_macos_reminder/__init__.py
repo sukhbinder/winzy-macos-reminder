@@ -35,7 +35,7 @@ def create_reminder(description, date_str, date_format):
 
 def create_parser(subparser):
     parser = subparser.add_parser(
-        "remind", description="Create reminers in macos in cli"
+        "remind", description="Create reminders in macos with cli"
     )
     # Add subprser arguments here.
     parser.add_argument(
