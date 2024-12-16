@@ -21,7 +21,22 @@ winzy install winzy-macos-reminder
 ```
 ## Usage
 
-Usage instructions go here.
+```bash
+usage: winzy remind [-h] [-dt DATETIME] [-df DATE_FORMAT] description
+
+Create reminers in macos in cli
+
+positional arguments:
+  description           The description of the reminder.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -dt DATETIME, --datetime DATETIME
+                        The date and time for the reminder (e.g., '16 December 10am').
+  -df DATE_FORMAT, --date-format DATE_FORMAT
+                        The expected date format (default: '%d/%m/%Y').
+
+```
 
 ## Development
 
