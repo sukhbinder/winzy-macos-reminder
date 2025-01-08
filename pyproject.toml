@@ -1,6 +1,6 @@
 [project]
 name = "winzy-macos-reminder"
-version = "0.0.2"
+version = "0.0.3"
 description = "Create reminers in macos in cli"
 readme = "README.md"
 authors = [{name = "Sukhbinder Singh"}]

@@ -8,8 +8,10 @@ def create_reminder(description, date_str, date_format):
         # Parse the date string using dateutil's fuzzy logic
         if date_str is not None:
             parsed_date = parse(date_str, fuzzy=True)
+            text_t = description
         else:
-            parsed_date = parse(description, fuzzy=True)
+            parsed_date, text_t = parse(description, fuzzy_with_tokens=True)
+            text_t = " ".join(text_t)
 
         # Combine the user-provided date format with the time format
         time_format = "%H:%M:%S"
@@ -18,7 +20,7 @@ def create_reminder(description, date_str, date_format):
         # Prepare the AppleScript code
         applescript_code = f"""
         tell application "Reminders"
-            set newReminder to make new reminder with properties {{name:"{description}"}}
+            set newReminder to make new reminder with properties {{name:"{text_t}"}}
             set remind me date of newReminder to date "{applescript_date}"
         end tell
         """
@@ -39,7 +41,7 @@ def create_parser(subparser):
     )
     # Add subprser arguments here.
     parser.add_argument(
-        "description", type=str, help="The description of the reminder."
+        "description", type=str, nargs="*" ,help="The description of the reminder."
     )
     parser.add_argument(
         "-dt",
@@ -69,7 +71,8 @@ class WinzyPlugin:
         parser.set_defaults(func=self.run)
 
     def run(self, args):
-        create_reminder(args.description, args.datetime, args.date_format)
+        description = " ".join(args.description)
+        create_reminder(description, args.datetime, args.date_format)
 
     def hello(self, args):
         # this routine will be called when "winzy remind is called."

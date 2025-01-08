@@ -38,6 +38,9 @@ optional arguments:
 
 ```
 
+## Demo
+![winzy remind demo](remind.gif)
+
 ## Development
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
