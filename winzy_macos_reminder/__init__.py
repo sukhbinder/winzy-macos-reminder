@@ -41,7 +41,7 @@ def create_parser(subparser):
     )
     # Add subprser arguments here.
     parser.add_argument(
-        "description", type=str, nargs="*" ,help="The description of the reminder."
+        "description", type=str, nargs="*", help="The description of the reminder."
     )
     parser.add_argument(
         "-dt",

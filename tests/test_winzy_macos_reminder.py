@@ -11,7 +11,7 @@ def test_create_parser():
     assert parser is not None
 
     result = parser.parse_args(["hello"])
-    assert result.description == "hello"
+    assert result.description == ["hello"]
     assert result.datetime is None
     assert result.date_format == "%d/%m/%Y"
 

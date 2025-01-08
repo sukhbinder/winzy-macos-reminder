@@ -39,7 +39,7 @@ optional arguments:
 ```
 
 ## Demo
-![winzy remind demo](remind.gif)
+![winzy remind demo](https://raw.githubusercontent.com/sukhbinder/winzy-macos-reminder/refs/heads/main/remind.gif)
 
 ## Development
 
